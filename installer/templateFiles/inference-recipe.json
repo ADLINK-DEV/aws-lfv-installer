@@ -1,0 +1,51 @@
+{
+    "RecipeFormatVersion": "2020-01-25",
+    "ComponentName": "",
+    "ComponentVersion": "1.0.0",
+    "ComponentType": "aws.greengrass.generic",
+    "ComponentDescription": "ADLINK Edge Lookout for Vision inference Profile",
+    "ComponentPublisher": "ADLINK",
+    "ComponentConfiguration": {
+      "DefaultConfiguration": {
+          "accessControl": {
+            "aws.greengrass.ipc.mqttproxy": {
+              "aws-lfv-edge-inference:mqttproxy:1": {
+                "policyDescription": "Allows access to publish/subscribe to all topics.",
+                "operations": [
+                  "aws.greengrass#PublishToIoTCore"
+                ],
+                "resources": [
+                  "*"
+                ]
+              }
+            }
+          }
+      }
+  },
+  "ComponentDependencies": {
+    "aws.greengrass.TokenExchangeService": {
+      "VersionRequirement": ">=2.0.0 <3.0.0",
+      "DependencyType": "HARD"
+    }
+  },
+    "Manifests": [
+      {
+        "Platform": {
+          "os": "linux"
+        },
+        "Lifecycle": {
+          "Startup": "docker-compose -f {artifacts:decompressedPath}/inference/docker-compose.yaml up -d",
+          "Shutdown": "docker-compose -f {artifacts:decompressedPath}/inference/docker-compose.yaml down"
+        },
+        "Artifacts": [
+          {
+            "URI": "",
+            "Unarchive": "ZIP",
+            "Permission": {
+              "Read": "ALL"
+            }
+          }
+        ]
+      }
+    ]
+  }

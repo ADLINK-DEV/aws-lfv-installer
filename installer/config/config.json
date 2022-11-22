@@ -1,0 +1,74 @@
+{
+    "progress": {
+        "Install prerequisite software": {
+            "complete": false,
+            "requirements": []
+        },
+        "Configure AWS CLI": {
+            "complete": false,
+            "requirements": [
+                0
+            ]
+        },
+        "Deploy AWS IoT Greengrass Core to local device": {
+            "complete": false,
+            "requirements": [
+                0,
+                1
+            ]
+        },
+        "Deploy streamer profile": {
+            "complete": false,
+            "requirements": [
+                0,
+                1,
+                2
+            ]
+        },
+        "Deploy inference model": {
+            "complete": false,
+            "requirements": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "Deploy inference profile": {
+            "complete": false,
+            "requirements": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "Remove created AWS resources / undo last deployed stage": {
+            "complete": false,
+            "requirements": [
+                0,
+                1
+            ]
+        }
+    },
+    "profile_configuration": {
+        "streamId": ""
+    },
+    "aws_details": {
+        "profileName": "",
+        "thingName": "",
+        "thingRole": "",
+        "thingRoleAlias": "",
+        "thingPolicy": "",
+        "UserId": "",
+        "certID": "",
+        "CliVersion": "",
+        "deployedModelName": "",
+        "deployedModelVersion": "",
+        "region": ""
+    },
+    "created_resources": {},
+    "local files": false,
+    "last deployed stage": 0
+}

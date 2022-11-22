@@ -1,0 +1,19 @@
+{
+    "targetArn": "",
+    "deploymentName": "Deployment for ",
+    "components": {
+        "aws.greengrass.Cli": {
+            "componentVersion": "VERSION"
+        }
+    },
+    "deploymentPolicies": {
+        "failureHandlingPolicy": "DO_NOTHING",
+        "componentUpdatePolicy": {
+            "timeoutInSeconds": 60,
+            "action": "NOTIFY_COMPONENTS"
+        },
+        "configurationValidationPolicy": {
+            "timeoutInSeconds": 60
+        }
+    }
+}
