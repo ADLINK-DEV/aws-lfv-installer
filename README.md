@@ -17,7 +17,7 @@ This installer automates the steps required to deploy the solution as described 
 
 To run the installer, clone the repository to the desired device, and from the directory containing the installer run:
 ``` 
-sudo ./lfv-installer.sh
+./lfv-installer.sh
 ``` 
 
 # 2. User Guide 
